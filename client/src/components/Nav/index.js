@@ -2,11 +2,18 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-md navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
-        Step-By-Step
+        Home  |
+      </a>
+      <a className="navbar-brand" href="/">
+        Instructions   |
+      </a>
+      <a className="navbar-brand" href="/">
+        Create |
       </a>
     </nav>
+    
   );
 }
 

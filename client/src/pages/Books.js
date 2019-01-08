@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-
+import './style.css';
 class Books extends Component {
   state = {
     books: [],
@@ -57,20 +57,20 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Step-By-Step </h1> 
+              <h2> DIY Task's </h2>
+              <a  />
             </Jumbotron>
             <form>
               <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                class="md-form active-cyan active-cyan-2 mb-6"
+                class="form-control" type="text" placeholder="Search" aria-label="Search"
               />
               <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
+              value={this.state.author}
+              onChange={this.handleInputChange}
                 name="author"
                 placeholder="Author (required)"
               />
