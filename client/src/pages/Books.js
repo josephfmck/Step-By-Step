@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-
+import './style.css';
+import Footer from "../components/Footer";
 class Books extends Component {
   state = {
     books: [],
@@ -57,58 +58,56 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Step-By-Step </h1>
+              <h2> DIY Task's </h2>
+              <a />
             </Jumbotron>
             <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
+              <Col size="md-12" >
+                <Row>
+                  <Col size="md-6">
+                    <Input
+                      class="md-form active-cyan active-cyan-2 md-6"
+                      class="form-control" type="text" placeholder="Search" aria-label="Search"
+                    />
+                  </Col>
+                  <Col size="md-6">
+                    <Link to="/">
+                      <button className="btn btn-outline-success">Create Own Button</button>
+
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
+                  </Col>
+                </Row>
+              </Col>
+
+              <List>
+                <Row>
+                  <Col size="md-4">
+                  img
+                  </Col>
+                  <Col size="md-4">
+                  link
+                  </Col>
+                  <Col size="md-4">
+                  time created
+                  </Col>
+                  <Col size="md-6">
+                  Description
+                  </Col>
+                  <Col size="md-6">
+                  Author/Src
+                  </Col>
+                </Row>
+              </List>  
+
+            </form>
+            <Footer>
+                
+                </Footer> 
           </Col>
+        
         </Row>
       </Container>
     );
