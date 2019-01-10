@@ -7,29 +7,34 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-class Books extends Component {
+class StepBySteps extends Component {
   state = {
-    books: [],
+    stepBySteps: [],
     title: "",
     author: "",
-    synopsis: ""
+    description: "",
+    step1: "",
+    step2: "",
+    step3: "",
+    step4: ""
+
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadStepBySteps();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadStepBySteps = () => {
+    API.getStepBySteps()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ stepBySteps: res.data, title: "", author: "", description: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deleteStepByStep = id => {
+    API.deleteStepByStep(id)
+      .then(res => this.loadStepBySteps())
       .catch(err => console.log(err));
   };
 
@@ -43,12 +48,16 @@ class Books extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveBook({
+      API.saveStepByStep({
         title: this.state.title,
         author: this.state.author,
-        synopsis: this.state.synopsis
+        description: this.state.description,
+        step1: this.state.step1,
+        step2: this.state.step2,
+        step3: this.state.step3,
+        step4: this.state.step4
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadStepBySteps())
         .catch(err => console.log(err));
     }
   };
@@ -75,10 +84,10 @@ class Books extends Component {
                 placeholder="Author (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.description}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="Description (Optional)"
               />
               <FormBtn
                 disabled={!(this.state.author && this.state.title)}
@@ -92,16 +101,16 @@ class Books extends Component {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {this.state.stepBySteps.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.stepBySteps.map(stepByStep => (
+                  <ListItem key={stepByStep._id}>
+                    <Link to={"/stepbystep/" + stepByStep._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {stepByStep.title} by {stepByStep.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => this.deleteStepByStep(stepByStep._id)} />
                   </ListItem>
                 ))}
               </List>
@@ -115,4 +124,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default StepBySteps;
