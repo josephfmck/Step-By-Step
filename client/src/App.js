@@ -6,7 +6,7 @@ import Detail from "./pages/Detail";
 import Home from "./pages/Home";
 import Steps from "./pages/Steps";
 
-
+import FormPage from "./pages/FormPage";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
@@ -22,6 +22,7 @@ function App() {
 
           <Route exact path="/home" component={Home} />
           <Route exact path="/steps" component={Steps} />
+          <Route exact path="/FormPage" component={FormPage} />
           <Route component={NoMatch} />
         </Switch>
       </div>

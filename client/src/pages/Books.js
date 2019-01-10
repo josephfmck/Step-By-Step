@@ -8,6 +8,9 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import Footer from "../components/Footer";
+import ApiImages from "../components/ApiImages";
+import { runInNewContext } from "vm";
+import H2 from "../components/H2";
 class Books extends Component {
   state = {
     books: [],
@@ -69,12 +72,12 @@ class Books extends Component {
                 <Row>
                   <Col size="md-6">
                     <Input
-                      class="md-form active-cyan active-cyan-2 md-6"
-                      class="form-control" type="text" placeholder="Search" aria-label="Search"
+                      className="md-form active-cyan active-cyan-2 md-6"
+                      className="form-control" type="text" placeholder="Search" aria-label="Search"
                     />
                   </Col>
                   <Col size="md-6">
-                    <Link to="/">
+                    <Link to="/FormPage">
                       <button className="btn btn-outline-success">Create Own Button</button>
 
                     </Link>
@@ -85,17 +88,23 @@ class Books extends Component {
               <List>
                 <Row>
                   <Col size="md-4">
-                  img
+                  <ApiImages>
+             </ApiImages> 
                   </Col>
                   <Col size="md-4">
-                  link
+                  <Link to="/">
+                  Link
+                  </Link>
                   </Col>
-                  <Col size="md-4">
-                  time created
+                  <Col size="md-4" >
+                  Created at: Moment.js
                   </Col>
                   <Col size="md-6">
+                  <TextArea >
                   Description
+                  </TextArea>
                   </Col>
+                
                   <Col size="md-6">
                   Author/Src
                   </Col>
