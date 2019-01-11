@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Steps from "./pages/Steps";
 
 import FormPage from "./pages/FormPage";
+
+
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
@@ -16,13 +18,14 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Books} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/steps" component={Steps} />
+          <Route exact path="/formpage" component={FormPage} />
+
           <Route exact path="/books" component={Books} />
           <Route exact path="/books/:id" component={Detail} />
 
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/steps" component={Steps} />
-          <Route exact path="/FormPage" component={FormPage} />
           <Route component={NoMatch} />
         </Switch>
       </div>
