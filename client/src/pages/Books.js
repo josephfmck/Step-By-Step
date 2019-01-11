@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import './style.css';
+import Footer from "../components/Footer";
+import ApiImages from "../components/ApiImages";
+import { runInNewContext } from "vm";
+import H2 from "../components/H2";
+=======
 
 class Books extends Component {
   state = {
@@ -62,6 +68,50 @@ class Books extends Component {
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
             <form>
+
+              <Col size="md-12" >
+                <Row>
+                  <Col size="md-6">
+                    <Input
+                      className="md-form active-cyan active-cyan-2 md-6"
+                      className="form-control" type="text" placeholder="Search" aria-label="Search"
+                    />
+                  </Col>
+                  <Col size="md-6">
+                    <Link to="/FormPage">
+                      <button className="btn btn-outline-success">Create Own Button</button>
+
+                    </Link>
+                  </Col>
+                </Row>
+              </Col>
+
+              <List>
+                <Row>
+                  <Col size="md-4">
+                  <ApiImages>
+             </ApiImages> 
+                  </Col>
+                  <Col size="md-4">
+                  <Link to="/">
+                  Link
+                  </Link>
+                  </Col>
+                  <Col size="md-4" >
+                  Created at: Moment.js
+                  </Col>
+                  <Col size="md-6">
+                  <TextArea >
+                  Description
+                  </TextArea>
+                  </Col>
+                
+                  <Col size="md-6">
+                  Author/Src
+                  </Col>
+                </Row>
+              </List>  
+
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}

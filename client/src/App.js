@@ -5,7 +5,9 @@ import Detail from "./pages/Detail";
 
 import Home from "./pages/Home";
 import Steps from "./pages/Steps";
+
 import FormPage from "./pages/FormPage";
+
 
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";

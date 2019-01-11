@@ -16,6 +16,7 @@
             "name": "Client",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}"
+
         }
     ]
 }
