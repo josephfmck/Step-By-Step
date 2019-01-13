@@ -11,6 +11,7 @@ import FormPage from "./pages/FormPage";
 
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
           <Route component={NoMatch} />
         </Switch>
+
+        <Footer />
       </div>
     </Router>
   );
