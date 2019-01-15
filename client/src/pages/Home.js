@@ -9,7 +9,11 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import Footer from "../components/Footer";
 import ApiImages from "../components/ApiImages";
+import Moment from 'react-moment';
+import moment from 'moment'
 
+
+const dateToFormat = moment().format('MMMM Do YYYY, h:mm:ss a');
 
 class Home extends Component {
     state = {
@@ -91,20 +95,22 @@ class Home extends Component {
                   </Col>
                   <Col size="md-4">
                   <Link to="/">
-                  Link
+                  Link 
                   </Link>
                   </Col>
                   <Col size="md-4" >
-                  Created at: Moment.js
+                  <Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>                  </Col>
+                  <Col size="md-6" >
+                  <dl class="row">
+  <dt class="col-sm-3">Description </dt>
+  <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
+           </dl>       
                   </Col>
+  
                   <Col size="md-6">
-                  <TextArea >
-                  Description
-                  </TextArea>
-                  </Col>
-                
-                  <Col size="md-6">
-                  Author/Src
+                 <h6> Author/Src:
+                  <p> ???????? </p>
+                 </h6>
                   </Col>
                 </Row>
               </List>  

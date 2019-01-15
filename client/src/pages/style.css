@@ -1,3 +1,7 @@
 div.jumbotron {
- background-image: url("../img/nicola-fioravanti-272999-unsplash.jpg");
+ background-image: url("");
+}
+
+h6, .h6{
+margin: 1px;    
 }

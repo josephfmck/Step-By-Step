@@ -11,7 +11,6 @@ import Footer from "../components/Footer";
 import ApiImages from "../components/ApiImages";
 import { runInNewContext } from "vm";
 import H2 from "../components/H2";
-=======
 
 class Books extends Component {
   state = {
