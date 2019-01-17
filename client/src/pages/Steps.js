@@ -23,7 +23,7 @@ const borderBottom = {
 
 class Steps extends Component {
     state = {
-        instruction: {}
+        step: {}
     };
 
     render() {

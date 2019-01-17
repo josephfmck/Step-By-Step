@@ -8,7 +8,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import ApiImages from "../components/ApiImages";
-//import Moment from 'react-moment';
+import Moment from 'react-moment';
 //import moment from 'moment'
 
 
@@ -19,6 +19,7 @@ class Home extends Component {
     stepBySteps: [],
     title: "",
     author: "",
+    description: "",
     steps: ""
   };
 
@@ -98,7 +99,7 @@ class Home extends Component {
                   </Link>
                   </Col>
                   <Col size="md-4" >
-    {/*<Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>*/}                  
+                    <Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>
                   </Col>
                   <Col size="md-6" >
                     <dl class="row">
