@@ -1,5 +1,5 @@
-import Popper from 'popper.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+//import Popper from 'popper.js';
+//import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from "react";
 import './style.css';
 
