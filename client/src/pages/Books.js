@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import './style.css';
-import Footer from "../components/Footer";
 import ApiImages from "../components/ApiImages";
+
 import { runInNewContext } from "vm";
 import H2 from "../components/H2";
+
 
 class Books extends Component {
   state = {

@@ -57,19 +57,20 @@ class FormPage extends Component {
                              className="form-control" type="text" placeholder="Step 2." aria-label="input" />
                            
                         </Col>
-                        <Col size="md-12">
+                        <Col size="md-8">
                          <Input 
                              className="md-form active-cyan active-cyan-2 md-6"
                              className="form-control" type="text" placeholder="Other Info" aria-label="input" />
                            
                         </Col>
-                        
+                        <Col size = "md-4">
+                        <button className="btn btn-outline-success"> Add </button>
+                        </Col>
                     </Row> 
                     </List>
                    </Col>
                    </form>
-                   <Footer>
-              </Footer>
+            
           
           </Container>
           

@@ -100,8 +100,6 @@ class Steps extends Component {
                     </Row>
                     </List>
                 </Col>
-<Footer>
-    </Footer>
 
             </Container>
         );
