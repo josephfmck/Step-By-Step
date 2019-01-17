@@ -8,35 +8,35 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import ApiImages from "../components/ApiImages";
-import Moment from 'react-moment';
-import moment from 'moment'
+//import Moment from 'react-moment';
+//import moment from 'moment'
 
 
-const dateToFormat = moment().format('MMMM Do YYYY, h:mm:ss a');
+//const dateToFormat = moment().format('MMMM Do YYYY, h:mm:ss a');
 
 class Home extends Component {
   state = {
     stepBySteps: [],
     title: "",
     author: "",
-    step: ""
-  }
+    steps: ""
+  };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadStepBySteps();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadStepBySteps = () => {
+    API.getStepBySteps()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ stepBySteps: res.data, title: "", author: "", description: "", steps: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deleteStepByStep = id => {
+    API.deleteStepByStep(id)
+      .then(res => this.loadStepBySteps())
       .catch(err => console.log(err));
   };
 
@@ -50,12 +50,13 @@ class Home extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {
-      API.saveBook({
+      API.saveStepByStep({
         title: this.state.title,
         author: this.state.author,
-        synopsis: this.state.synopsis
+        description: this.state.description,
+        steps: this.state.steps
       })
-        .then(res => this.loadBooks())
+        .then(res => this.loadStepBySteps())
         .catch(err => console.log(err));
     }
   };
@@ -92,26 +93,27 @@ class Home extends Component {
                     </ApiImages>
                   </Col>
                   <Col size="md-4">
-                  <Link to="/">
-                  Link 
+                    <Link to="/">
+                      Link
                   </Link>
                   </Col>
                   <Col size="md-4" >
-                  <Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>                  </Col>
+    {/*<Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>*/}                  
+                  </Col>
                   <Col size="md-6" >
-                  <dl class="row">
-  <dt class="col-sm-3">Description </dt>
-  <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
-           </dl>       
+                    <dl class="row">
+                      <dt class="col-sm-3">Description </dt>
+                      <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
+                    </dl>
                   </Col>
-  
+
                   <Col size="md-6">
-                 <h6> Author/Src:
+                    <h6> Author/Src:
                   <p> ???????? </p>
-                 </h6>
-                  
+                    </h6>
+
                   </Col>
-               
+
                 </Row>
               </List>
             </form>

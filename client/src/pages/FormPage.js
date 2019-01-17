@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
+//import API from "../utils/API";
+//import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
-import Footer from "../components/Footer";
 import ApiImages from "../components/ApiImages";
-import Moment from 'react-moment';
-import moment from 'moment'
+//import Moment from 'react-moment';
+//import moment from 'moment'
 class FormPage extends Component {
     state = {
       steps: {}

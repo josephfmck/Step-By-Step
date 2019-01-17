@@ -1,15 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 
 import Home from "./pages/Home";
 import Steps from "./pages/Steps";
-
 import FormPage from "./pages/FormPage";
-
-
 import NoMatch from "./pages/NoMatch";
+
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
