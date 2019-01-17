@@ -92,7 +92,6 @@ class Home extends Component {
                     </ApiImages>
                   </Col>
                   <Col size="md-4">
-
                   <Link to="/">
                   Link 
                   </Link>
@@ -110,30 +109,13 @@ class Home extends Component {
                  <h6> Author/Src:
                   <p> ???????? </p>
                  </h6>
-
-                    <Link to="/">
-                      Link
-                  </Link>
+                  
                   </Col>
-                  <Col size="md-4" >
-                    Created at: Moment.js
-                  </Col>
-                  <Col size="md-6">
-                    <TextArea >
-                      Description
-                  </TextArea>
-                  </Col>
-
-                  <Col size="md-6">
-                    Author/Src
-
-                  </Col>
+               
                 </Row>
               </List>
             </form>
-
           </Col>
-
         </Row>
       </Container>
     );
