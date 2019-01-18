@@ -18,6 +18,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/home/:id" component={Steps} />
+          <Route exact path="/steps" component={Steps} />
           <Route exact path="/formpage" component={FormPage} />
           <Route component={NoMatch} />
         </Switch>
