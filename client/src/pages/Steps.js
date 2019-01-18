@@ -7,10 +7,9 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
-import Footer from "../components/Footer";
 import ApiImages from "../components/ApiImages";
-import Moment from 'react-moment';
-import moment from 'moment'
+//import Moment from 'react-moment';
+//import moment from 'moment'
 
 const buttonStyle = {
     marginLeft: '100px'
@@ -24,7 +23,7 @@ const borderBottom = {
 
 class Steps extends Component {
     state = {
-        instruction: {}
+        step: {}
     };
 
     render() {
