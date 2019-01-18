@@ -63,7 +63,8 @@ class FormPage extends Component {
                            
                         </Col>
                         <Col size = "md-4">
-                        <button className="btn btn-outline-success"> Add </button>
+                        <button type="button" className="btn btn-primary">Add Step</button>
+                        <button className="btn btn-outline-success"> Submit </button>
                         </Col>
                     </Row> 
                     </List>
