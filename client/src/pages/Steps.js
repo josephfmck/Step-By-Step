@@ -26,6 +26,14 @@ class Steps extends Component {
         step: {}
     };
 
+    // When this component mounts, grab the book with the _id of this.props.match.params.id
+    // e.g. localhost:3000/books/599dcb67f0f16317844583fc
+    componentDidMount() {
+        API.getStepByStep(this.props.match.params.id)
+            .then(res => this.setState({ step: res.data }))
+            .catch(err => console.log(err));
+    }
+
     render() {
         return (
             <Container fluid>
@@ -33,70 +41,68 @@ class Steps extends Component {
                     <Col size="md-12">
                         <Jumbotron>
                             <h1>Step-By-Step Instructions</h1>
-                            <h2> How to.. </h2>
+                            <h2> {this.state.step.title}</h2>
                         </Jumbotron>
                     </Col>
                 </Row>
 
                 <Col size="md-12">
-                <List>
-                    <Row>
-                        <Col size="md-12">
-                            <h1> Step 1. </h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col size="md-2">
-                            <ApiImages>
-                            </ApiImages>
-                        </Col>
-                        <Col size="md-6" >
-                            <dl class="row">
-                                <dt class="col-sm-3">Info</dt>
-                                <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
-                            </dl>
-                        </Col>
+                    <List>
+                        <Row>
+                            <Col size="md-12">
+                                <h1> Step 1. </h1>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-2">
+                                <ApiImages>
+                                </ApiImages>
+                            </Col>
 
-                        <Col size="md-4">
-                            <Link to="/FormPage">
-                                <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
-                            </Link>
+                            <Col size="md-6" >
+                                <dl class="row">
+                                    <dt class="col-sm-3">Summary of step</dt>
+                                    <dd class="col-sm-6">{this.state.step.steps}</dd>
+                                </dl>
+                            </Col>
 
+                            <Col size="md-4">
+                                <Link to="/FormPage">
+                                    <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
+                                </Link>
+                            </Col>
 
-                        </Col>
-                    </Row>
+                        </Row>
                     </List>
                 </Col>
 
 
 
                 <Col size="md-12">
-                <List>
-                    <Row>
-                        <Col size="md-12">
-                            <h1> Step 2. </h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col size="md-2">
-                            <ApiImages>
-                            </ApiImages>
-                        </Col>
-                        <Col size="md-6" >
-                            <dl class="row">
-                                <dt class="col-sm-3">Info</dt>
-                                <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
-                            </dl>
-                        </Col>
+                    <List>
+                        <Row>
+                            <Col size="md-12">
+                                <h1> Step 2. </h1>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-2">
+                                <ApiImages>
+                                </ApiImages>
+                            </Col>
+                            <Col size="md-6" >
+                                <dl class="row">
+                                    <dt class="col-sm-3">Summary of the step</dt>
+                                    <dd class="col-sm-6">{this.state.step.steps}</dd>
+                                </dl>
+                            </Col>
 
-                        <Col size="md-4">
-                            <Link to="/FormPage">
-                                <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
-                            </Link>
-                        
-                        </Col>
-
-                    </Row>
+                            <Col size="md-4">
+                                <Link to="/FormPage">
+                                    <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
+                                </Link>
+                            </Col>
+                        </Row>
                     </List>
                 </Col>
 
