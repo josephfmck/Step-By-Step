@@ -12,71 +12,71 @@ import './style.css';
 //import moment from 'moment'
 class FormPage extends Component {
     state = {
-      steps: {}
+        steps: {}
     };
 
     render() {
         return (
-          <Container fluid>
-            <Row>
-                <Col size="md-12">
-                    <Jumbotron>
-                        <h1>Step-By-Step Create</h1>
-                        <h2>Make Your Own.  </h2>
-                    </Jumbotron>
-                    </Col>
-                    </Row>
-
-                    <form>
+            <Container fluid>
+                <Row>
                     <Col size="md-12">
-                <List>
-                    <Row>
-                        <Col size="md-6">
-                            <Input 
-                             className="md-form active-cyan active-cyan-2 md-6"
-                             className="form-control" type="text" placeholder="Title" aria-label="input"
-                            /> 
-                        </Col>
-                        <Col size="md-6">
-                        <Input 
-                             className="md-form active-cyan active-cyan-2 md-6"
-                             className="form-control" type="text" placeholder="Step 1." aria-label="input" />
-                           
-                        </Col>
-                        
-                         <Col size="md-6">
-                         <Input 
-                             className="md-form active-cyan active-cyan-2 md-6"
-                             className="form-control" type="text" placeholder="Description" aria-label="input" />
-                          
-                         </Col>
-                         <Col size="md-6">
-                         <Input 
-                             className="md-form active-cyan active-cyan-2 md-6"
-                             className="form-control" type="text" placeholder="Step 2." aria-label="input" />
-                           
-                        </Col>
-                        <Col size="md-8">
-                         <Input 
-                             className="md-form active-cyan active-cyan-2 md-6"
-                             className="form-control" type="text" placeholder="Other Info" aria-label="input" />
-                           
-                        </Col>
-                        <Col size = "md-4">
-                        <button type="button" className="btn btn-primary">Add Step</button>
-                        <button className="btn btn-outline-success"> Submit </button>
-                        </Col>
-                    </Row> 
-                    </List>
-                   </Col>
-                   </form>
-            
-          
-          </Container>
-          
+                        <Jumbotron>
+                            <h1>Step-By-Step Create</h1>
+                            <h2>Make Your Own.  </h2>
+                        </Jumbotron>
+                    </Col>
+                </Row>
+
+                <form>
+                    <Col size="md-12">
+                        <List>
+                            <Row>
+                                <Col size="md-6">
+                                    <Input
+                                        className="md-form active-cyan active-cyan-2 md-6"
+                                        className="form-control" type="text" placeholder="Title" aria-label="input"
+                                    />
+                                </Col>
+                                <Col size="md-6">
+                                    <Input
+                                        className="md-form active-cyan active-cyan-2 md-6"
+                                        className="form-control" type="text" placeholder="Step 1." aria-label="input" />
+
+                                </Col>
+
+                                <Col size="md-6">
+                                    <Input
+                                        className="md-form active-cyan active-cyan-2 md-6"
+                                        className="form-control" type="text" placeholder="Description" aria-label="input" />
+
+                                </Col>
+                                <Col size="md-6">
+                                    <Input
+                                        className="md-form active-cyan active-cyan-2 md-6"
+                                        className="form-control" type="text" placeholder="Step 2." aria-label="input" />
+
+                                </Col>
+                                <Col size="md-8">
+                                    <Input
+                                        className="md-form active-cyan active-cyan-2 md-6"
+                                        className="form-control" type="text" placeholder="Other Info" aria-label="input" />
+
+                                </Col>
+                                <Col size="md-4">
+                                    <button type="button" className="btn btn-primary">Add Step</button>
+                                    <button className="btn btn-outline-success"> Submit </button>
+                                </Col>
+                            </Row>
+                        </List>
+                    </Col>
+                </form>
+
+
+            </Container>
+
         );
-      }
     }
+}
 
 export default FormPage;
 
