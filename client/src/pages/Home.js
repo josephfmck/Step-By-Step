@@ -9,6 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import ApiImages from "../components/ApiImages";
 import Moment from 'react-moment';
+import SearchBar from "../components/SearchBar";
 //import moment from 'moment'
 
 
@@ -75,10 +76,7 @@ class Home extends Component {
               <Col size="md-12" >
                 <Row>
                   <Col size="md-6">
-                    <Input
-                      className="md-form active-cyan active-cyan-2 md-6"
-                      className="form-control" type="text" placeholder="Search" aria-label="Search"
-                    />
+                    <SearchBar />
                   </Col>
                   <Col size="md-6">
                     <Link to="/FormPage">
@@ -87,6 +85,11 @@ class Home extends Component {
                   </Col>
                 </Row>
               </Col>
+            </form>
+
+
+
+            
               <List>
                 <Row>
                   <Col size="md-4">
@@ -110,37 +113,16 @@ class Home extends Component {
 
                   <Col size="md-6">
                     <h6> Author/Src:
-                  <p>{this.state.author}</p>
+                  <p> ???????? </p>
                     </h6>
 
                   </Col>
 
                 </Row>
               </List>
-            </form>
 
 
-            <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Steps By Steps On My List</h1>
-            </Jumbotron>
-            {this.state.stepBySteps.length ? (
-              <List>
-                {this.state.stepBySteps.map(stepByStep => (
-                  <ListItem key={stepByStep._id}>
-                    <Link to={"/home/" + stepByStep._id}>
-                      <strong>
-                        {stepByStep.title} by {stepByStep.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteStepByStep(stepByStep._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-            </Col>
+
 
 
           </Col>
