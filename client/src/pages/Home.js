@@ -122,6 +122,28 @@ class Home extends Component {
               </List>
 
 
+              <Col size="md-6 sm-12">
+            <Jumbotron>
+              <h1>Steps By Steps On My List</h1>
+            </Jumbotron>
+            {this.state.stepBySteps.length ? (
+              <List>
+                {this.state.stepBySteps.map(stepByStep => (
+                  <ListItem key={stepByStep._id}>
+                    <Link to={"/home/" + stepByStep._id}>
+                      <strong>
+                        {stepByStep.title} by {stepByStep.author}
+                      </strong>
+                    </Link>
+                    <DeleteBtn onClick={() => this.deleteStepByStep(stepByStep._id)} />
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+            </Col>
+
 
 
 
