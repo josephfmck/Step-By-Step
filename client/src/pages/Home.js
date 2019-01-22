@@ -92,6 +92,8 @@ class Home extends Component {
             
               <List>
                 <Row>
+
+                  
                   <Col size="md-4">
                     <ApiImages>
                     </ApiImages>
@@ -122,20 +124,31 @@ class Home extends Component {
               </List>
 
 
-              <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Steps By Steps On My List</h1>
-            </Jumbotron>
+            <Col size="md-6 sm-12">
+
             {this.state.stepBySteps.length ? (
               <List>
                 {this.state.stepBySteps.map(stepByStep => (
                   <ListItem key={stepByStep._id}>
-                    <Link to={"/home/" + stepByStep._id}>
-                      <strong>
-                        {stepByStep.title} by {stepByStep.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteStepByStep(stepByStep._id)} />
+                   <Row>
+                    <Col size="md-4">
+                        <ApiImages>
+                        </ApiImages>
+                    </Col>
+                    <Col size="md-4">
+                        <Link to={"/home/" + stepByStep._id}>
+                          <strong>
+                            {stepByStep.title}
+                          </strong>
+                        </Link>
+                    </Col>
+                    <Col size="md-4" >
+                    <Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>
+                    <h6> Author/Src: {stepByStep.author}
+                    </h6>
+                    </Col>
+
+                   </Row>
                   </ListItem>
                 ))}
               </List>
