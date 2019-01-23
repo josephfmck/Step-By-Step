@@ -2,12 +2,12 @@ import React from "react";
 
 function SearchBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        Change to a Search bar for step-by-steps on the homepage.
-      </a>
-    </nav>
+    <input
+      className="md-form active-cyan active-cyan-2 md-6"
+      className="form-control" type="text" placeholder="Search" aria-label="Search"
+    />
   );
 }
+
 
 export default SearchBar;

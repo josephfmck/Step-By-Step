@@ -1,6 +1,7 @@
 
 div.jumbotron {
  background-image: url("http://starhomeliving.com/wp-content/uploads/2017/09/Helpful-Do-It-Yourself-Tips.jpg");
+ background-size: 1250px 300px;
 }
 
 h6, .h6{
@@ -15,3 +16,4 @@ h1, h2 {
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     color: black;
 }
+
