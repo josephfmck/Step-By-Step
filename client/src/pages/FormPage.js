@@ -13,7 +13,21 @@ import './style.css';
 class FormPage extends Component {
     state = {
         steps: {}
-    };
+    }
+    constructor(props) {
+    super(props)
+this.onClick = this.onClick.bind(this)    
+};
+
+onClick(add) {
+add.preventDefault();   
+console.log('Button Works')
+}
+
+
+
+   
+
 
     render() {
         return (
@@ -34,14 +48,15 @@ class FormPage extends Component {
                                 <Col size="md-6">
                                     <Input
                                         className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Title" aria-label="input"
+                                        className="form-control" type="text" placeholder="Title" aria-label="input" 
                                     />
                                 </Col>
                                 <Col size="md-6">
-                                    <Input
+                                    <Input 
+                                    id="stepz"
                                         className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Step 1." aria-label="input" />
-
+                                        className="form-control" type="text"  placeholder="Step 1." aria-label="input" />
+                                        
                                 </Col>
 
                                 <Col size="md-6">
@@ -52,6 +67,7 @@ class FormPage extends Component {
                                 </Col>
                                 <Col size="md-6">
                                     <Input
+                                    id="stepz"
                                         className="md-form active-cyan active-cyan-2 md-6"
                                         className="form-control" type="text" placeholder="Step 2." aria-label="input" />
 
@@ -63,8 +79,8 @@ class FormPage extends Component {
 
                                 </Col>
                                 <Col size="md-4">
-                                    <button type="button" className="btn btn-primary">Add Step</button>
-                                    <button className="btn btn-outline-success"> Submit </button>
+                                    <button  type="button" className="btn btn-primary" onClick ={this.onClick} >Add Step</button>
+                                    <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
                                 </Col>
                             </Row>
                         </List>
@@ -76,6 +92,8 @@ class FormPage extends Component {
 
         );
     }
+
+
 }
 
 export default FormPage;
