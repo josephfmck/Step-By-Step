@@ -15,18 +15,18 @@ class FormPage extends Component {
         steps: {}
     }
     constructor(props) {
-    super(props)
-this.onClick = this.onClick.bind(this)    
-};
+        super(props)
+        this.onClick = this.onClick.bind(this)
+    };
 
-onClick(add) {
-add.preventDefault();   
-console.log('Button Works')
-}
+    onClick(add) {
+        add.preventDefault();
+        console.log('Button Works')
+    }
 
 
 
-   
+
 
 
     render() {
@@ -42,53 +42,64 @@ console.log('Button Works')
                 </Row>
 
                 <form>
-                    <Col size="md-12">
-                        <List>
-                            <Row>
-                                <Col size="md-6">
-                                    <Input
-                                        className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Title" aria-label="input" 
-                                    />
-                                </Col>
-                                <Col size="md-6">
-                                    <Input 
-                                    id="stepz"
-                                        className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text"  placeholder="Step 1." aria-label="input" />
-                                        
-                                </Col>
+                    <Row>
+                        <Col size="md-12">
+                            <List>
+                                <Row>
+                                    <Col size="md-12">
+                                        <Input
+                                            className="md-form active-cyan active-cyan-2 md-6"
+                                            className="form-control" type="text" placeholder="Title" aria-label="input"
+                                        />
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col size="md-12">
+                                        <Input
+                                            className="md-form active-cyan active-cyan-2 md-12"
+                                            className="form-control" type="text" placeholder="Description" aria-label="input" />
 
-                                <Col size="md-6">
-                                    <Input
-                                        className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Description" aria-label="input" />
+                                    </Col>
+                                </Row>
 
-                                </Col>
-                                <Col size="md-6">
-                                    <Input
-                                    id="stepz"
-                                        className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Step 2." aria-label="input" />
+                                <Row>
+                                    <Col size="md-12">
+                                        <Input
+                                            className="md-form active-cyan active-cyan-2 md-6"
+                                            className="form-control" type="text" placeholder="Other Info" aria-label="input" />
 
-                                </Col>
-                                <Col size="md-8">
-                                    <Input
-                                        className="md-form active-cyan active-cyan-2 md-6"
-                                        className="form-control" type="text" placeholder="Other Info" aria-label="input" />
+                                    </Col>
+                                </Row>
+                                <Row>
 
-                                </Col>
-                                <Col size="md-4">
-                                    <button  type="button" className="btn btn-primary" onClick ={this.onClick} >Add Step</button>
-                                    <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
-                                </Col>
-                            </Row>
-                        </List>
-                    </Col>
+                                    <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 1." aria-label="input" />
+                                        </div>
+                                    </Col>
+
+                                </Row>
+
+                                <Row>
+                                    <Col size="md-4">
+                                        <button type="button" className="btn btn-primary" onClick={this.onClick} >Add Step</button>
+                                    </Col>
+                                </Row>
+
+
+                            </List>
+                        </Col>
+                    </Row>
                 </form>
 
+                <Row>
+                    <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
+                </Row>
 
-            </Container>
+            </Container >
 
         );
     }
@@ -97,4 +108,3 @@ console.log('Button Works')
 }
 
 export default FormPage;
-
