@@ -17,7 +17,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 //mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/stepbysteptest");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/stepybystepdata";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://Joe2:Toroler235@ds259154.mlab.com:59154/heroku_87fvfv6c";
  
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
