@@ -116,8 +116,11 @@ class FormPage extends Component {
                     </Col>
                 </form>
 
+                <Row>
+                    <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
+                </Row>
 
-            </Container>
+            </Container >
 
         );
     }
