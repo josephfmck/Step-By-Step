@@ -25,12 +25,3 @@ export function FormBtn(props) {
     </button>
   );
 }
-
-export function AddStep(props) {
-  return (
-    <div className="form-group">
-      <input className="form-control" placeholder="Additional Step" {...props}  />
-      
-    </div>
-  );
-}

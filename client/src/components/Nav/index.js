@@ -11,7 +11,7 @@ function Nav() {
         Home  |
       </a>
       <a className="navbar-brand" href="/Steps">
-      
+        Instructions   |
       </a>
       <a className="navbar-brand" href="/FormPage">
         Create |
