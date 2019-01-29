@@ -5,7 +5,7 @@ import Jumbotron from "../components/Jumbotron";
 //import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, TextArea, FormBtn, AddStep } from "../components/Form";
 import './style.css';
 //import ApiImages from "../components/ApiImages";
 //import Moment from 'react-moment';
@@ -22,6 +22,12 @@ class FormPage extends Component {
         stepfive: ''
     }
   
+    
+    constructor(props) {
+        super(props)
+        this.onClick = this.onClick.bind(this)
+    };
+
 
     handleSubmit(event) {
         event.preventDefault();
@@ -35,6 +41,7 @@ class FormPage extends Component {
         });
         console.log(this.state)
     };
+
 
 
     render() {
@@ -158,7 +165,6 @@ class FormPage extends Component {
 
         );
     }
-
 
 }
 
