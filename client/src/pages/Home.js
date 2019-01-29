@@ -75,13 +75,17 @@ class Home extends Component {
             <form>
               <Col size="md-12" >
                 <Row>
-                  <Col size="md-6">
+                  
+                  <Col id="search" size="md-4">
                     <SearchBar />
                   </Col>
-                  <Col size="md-6">
+                  <Col size="md-4">
                     <Link to="/FormPage">
-                      <button className="btn btn-outline-success">Create Own Button</button>
+                      <button className="btn btn-outline-success">Search</button>
                     </Link>
+                  </Col>
+                  <Col size="md-4">
+                  <button className="btn btn-outline-success">Create Own Button</button>
                   </Col>
                 </Row>
               </Col>
@@ -90,41 +94,10 @@ class Home extends Component {
 
 
             
-              <List>
-                <Row>
-
-                  
-                  <Col size="md-4">
-                    <ApiImages>
-                    </ApiImages>
-                  </Col>
-                  <Col size="md-4">
-                    <Link to="/">
-                      Link
-                  </Link>
-                  </Col>
-                  <Col size="md-4" >
-                    <Moment format="YYYY/MM/DD, h:mm:ss a"></Moment>
-                  </Col>
-                  <Col size="md-6" >
-                    <dl class="row">
-                      <dt class="col-sm-3">Description </dt>
-                      <dd class="col-sm-6">A description list is perfect for defining terms. test test test test test test test test test test</dd>
-                    </dl>
-                  </Col>
-
-                  <Col size="md-6">
-                    <h6> Author/Src:
-                  <p> ???????? </p>
-                    </h6>
-
-                  </Col>
-
-                </Row>
-              </List>
+            
 
 
-            <Col size="md-6 sm-12">
+            <Col size="md-12">
 
             {this.state.stepBySteps.length ? (
               <List>
