@@ -121,13 +121,22 @@ class FormPage extends Component {
                                         </div>
                                     </Col>
 
-                                      <Col size="md-12">
+                                    <Col size="md-12">
                                         <div id='steps'>
                                             <Input
                                             onChange={this.handleInputChange}
                                                 id="stepz"
                                                 className="md-form active-cyan active-cyan-2 md-6"
                                                 className="form-control" type="text" placeholder="Step 4 (Optional)" name="stepfour" aria-label="input" />
+                                        </div>
+                                    </Col>
+                                    <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                            onChange={this.handleInputChange}
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 5 (Optional)" name="stepfive" aria-label="input" />
                                         </div>
                                     </Col>
 
@@ -140,7 +149,7 @@ class FormPage extends Component {
                                                 className="form-control" type="text" placeholder="Step" name="Step" aria-label="input" />)}
                                         </div>
                                         
-                                    </Col>
+                                      </Col>
 
                                 </Row>
 
