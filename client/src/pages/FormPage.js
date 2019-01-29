@@ -19,7 +19,8 @@ class FormPage extends Component {
         steptwo: '',
         stepthree: '',
         stepfour: '',
-        stepfive: ''
+        stepfive: '',
+        steps: ['step']
     }
   
 
@@ -36,6 +37,11 @@ class FormPage extends Component {
         });
         console.log(this.state)
     };
+
+    addStepOnClick = () => {
+        var joined = this.state.steps.concat('step');
+        this.setState({ steps: joined });
+    }
 
 
 
@@ -126,20 +132,21 @@ class FormPage extends Component {
                                     </Col>
 
                                       <Col size="md-12">
+                
                                         <div id='steps'>
-                                            <Input
-                                            onChange={this.handleInputChange}
+                                            {this.state.steps.map((step,i) => <Input key={i}
                                                 id="stepz"
                                                 className="md-form active-cyan active-cyan-2 md-6"
-                                                className="form-control" type="text" placeholder="Step 5 (Optional)" name="stepfive" aria-label="input" />
+                                                className="form-control" type="text" placeholder="Step" name="Step" aria-label="input" />)}
                                         </div>
+                                        
                                     </Col>
 
                                 </Row>
 
                                 <Row>
                                     <Col size="md-4">
-                                        <button type="button" className="btn btn-primary" >Add Step</button>
+                                        <button type="button" className="btn btn-primary" onClick={this.addStepOnClick}>Add Step</button>
                                         <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
 
                                     </Col>
