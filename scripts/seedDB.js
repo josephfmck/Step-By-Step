@@ -15,7 +15,11 @@ const stepByStepItemSeed = [
     description:
       "Step by step guide on making a sandwhich!",
     date: new Date(Date.now()),
-    steps: [ "Get bread", "Get ingredients", "Put ingredients between bread" ]
+    stepone: "Get bread",
+    steptwo: "Get ingredients",
+    stepthree: "Put ingredients on bread",
+    stepfour: "Put other bread on top",
+    stepfive: "Eat sandwhich"
   },
   {
     title: "How to wash a plate",
@@ -23,7 +27,11 @@ const stepByStepItemSeed = [
     description:
       "Step by step guide on wash a plate!",
     date: new Date(Date.now()),
-    steps: [ "Get plate", "Get water and soap", "Wash plate" ]
+    stepone:  "Get plate",  
+    steptwo: "Get water and soap",
+    stepthree: "Get sponge",
+    stepfour: "Put soap on sponge",
+    stepfive: "Wash plate with sponge"
   },
   {
     title: "How to start a fire.",
@@ -31,7 +39,11 @@ const stepByStepItemSeed = [
     description:
       "Step by step guide on starting a fire!",
     date: new Date(Date.now()),
-    steps: [ "Get wood", "Pile wood up", "Light with match" ]
+    stepone:  "Get wood",  
+    steptwo: "Pile wood up",
+    stepthree: "Get kindling",
+    stepfour: "Light kindling",
+    stepfive: "Tend to fire"
   }
 ];
 

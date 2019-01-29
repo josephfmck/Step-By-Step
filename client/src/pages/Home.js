@@ -21,7 +21,11 @@ class Home extends Component {
     title: "",
     author: "",
     description: "",
-    steps: ""
+    stepone: "",
+    steptwo: "",
+    stepthree: "",
+    stepfour: "",
+    stepfive: "",
   };
 
   componentDidMount() {
@@ -31,7 +35,17 @@ class Home extends Component {
   loadStepBySteps = () => {
     API.getStepBySteps()
       .then(res =>
-        this.setState({ stepBySteps: res.data, title: "", author: "", description: "", steps: "" })
+        this.setState({ 
+          stepBySteps: res.data, 
+          title: "", 
+          author: "", 
+          description: "", 
+          stepone: "", 
+          steptwo: "", 
+          stepthree: "", 
+          stepfour: "", 
+          stepfive: "" 
+        })
       )
       .catch(err => console.log(err));
   };

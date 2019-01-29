@@ -6,7 +6,11 @@ const stepByStepSchema = new Schema({
   author: { type: String, required: true },
   description: { type: String, required: true },
   date: { type: Date, default: Date.now },
-  steps: { type: Array }
+  stepone: { type: String, required: true },
+  steptwo: { type: String, required: true },
+  stepthree: { type: String, required: true },
+  stepfour: { type: String, required: true },
+  stepfive: { type: String, required: true }
 });
 
 const StepByStep = mongoose.model("StepByStep", stepByStepSchema);

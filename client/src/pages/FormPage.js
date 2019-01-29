@@ -13,10 +13,10 @@ import './style.css';
 class FormPage extends Component {
     state = {
         title: '',
+        author: '',
+        description: '',
         stepone: '',
-        desc: '',
         steptwo: '',
-        otherinfo: '',
         stepthree: '',
         stepfour: '',
         stepfive: ''
@@ -69,7 +69,7 @@ class FormPage extends Component {
                                         <Input
                                         onChange={this.handleInputChange}
                                             className="md-form active-cyan active-cyan-2 md-12"
-                                            className="form-control" type="text" placeholder="Description" name="desc" aria-label="input" />
+                                            className="form-control" type="text" placeholder="Description" name="description" aria-label="input" />
 
                                     </Col>
                                 </Row>
@@ -79,7 +79,7 @@ class FormPage extends Component {
                                         <Input
                                         onChange={this.handleInputChange}
                                             className="md-form active-cyan active-cyan-2 md-6"
-                                            className="form-control" type="text" placeholder="Other Info" name="otherinfo" aria-label="input" />
+                                            className="form-control" type="text" placeholder="Author" name="author" aria-label="input" />
 
                                     </Col>
                                 </Row>
