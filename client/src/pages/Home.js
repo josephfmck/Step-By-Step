@@ -70,7 +70,11 @@ class Home extends Component {
         title: this.state.title,
         author: this.state.author,
         description: this.state.description,
-        steps: this.state.steps
+        stepone: this.state.stepone, 
+        steptwo: this.state.steptwo, 
+        stepthree: this.state.stepthree, 
+        stepfour: this.state.stepfour, 
+        stepfive: this.state.stepfive 
       })
         .then(res => this.loadStepBySteps())
         .catch(err => console.log(err));

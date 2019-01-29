@@ -62,7 +62,7 @@ class Steps extends Component {
                             <Col size="md-6" >
                                 <dl class="row">
                                     <dt class="col-sm-3">Summary of step</dt>
-                                    <dd class="col-sm-6">{this.state.step.steps}</dd>
+                                    <dd class="col-sm-6">{this.state.step.stepone}</dd>
                                 </dl>
                             </Col>
 
@@ -93,7 +93,7 @@ class Steps extends Component {
                             <Col size="md-6" >
                                 <dl class="row">
                                     <dt class="col-sm-3">Summary of the step</dt>
-                                    <dd class="col-sm-6">{this.state.step.steps}</dd>
+                                    <dd class="col-sm-6">{this.state.step.steptwo}</dd>
                                 </dl>
                             </Col>
 
@@ -106,6 +106,89 @@ class Steps extends Component {
                     </List>
                 </Col>
 
+                <Col size="md-12">
+                    <List>
+                        <Row>
+                            <Col size="md-12">
+                                <h1> Step 3. </h1>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-2">
+                                <ApiImages>
+                                </ApiImages>
+                            </Col>
+                            <Col size="md-6" >
+                                <dl class="row">
+                                    <dt class="col-sm-3">Summary of the step</dt>
+                                    <dd class="col-sm-6">{this.state.step.stepthree}</dd>
+                                </dl>
+                            </Col>
+
+                            <Col size="md-4">
+                                <Link to="/FormPage">
+                                    <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </List>
+                </Col>
+
+                <Col size="md-12">
+                    <List>
+                        <Row>
+                            <Col size="md-12">
+                                <h1> Step 4. </h1>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-2">
+                                <ApiImages>
+                                </ApiImages>
+                            </Col>
+                            <Col size="md-6" >
+                                <dl class="row">
+                                    <dt class="col-sm-3">Summary of the step</dt>
+                                    <dd class="col-sm-6">{this.state.step.stepfour}</dd>
+                                </dl>
+                            </Col>
+
+                            <Col size="md-4">
+                                <Link to="/FormPage">
+                                    <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </List>
+                </Col>
+
+                <Col size="md-12">
+                    <List>
+                        <Row>
+                            <Col size="md-12">
+                                <h1> Step 5. </h1>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="md-2">
+                                <ApiImages>
+                                </ApiImages>
+                            </Col>
+                            <Col size="md-6" >
+                                <dl class="row">
+                                    <dt class="col-sm-3">Summary of the step</dt>
+                                    <dd class="col-sm-6">{this.state.step.stepfive}</dd>
+                                </dl>
+                            </Col>
+
+                            <Col size="md-4">
+                                <Link to="/FormPage">
+                                    <button className="btn btn-outline-success" style={buttonStyle}> Edit</button>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </List>
+                </Col>
             </Container>
         );
     }
