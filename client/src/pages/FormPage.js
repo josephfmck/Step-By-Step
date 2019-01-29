@@ -12,21 +12,29 @@ import './style.css';
 //import moment from 'moment'
 class FormPage extends Component {
     state = {
-        steps: {}
+        title: '',
+        stepone: '',
+        desc: '',
+        steptwo: '',
+        otherinfo: '',
+        stepthree: '',
+        stepfour: '',
+        stepfive: ''
     }
-    constructor(props) {
-        super(props)
-        this.onClick = this.onClick.bind(this)
+  
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+
+        });
+        console.log(this.state)
     };
-
-    onClick(add) {
-        add.preventDefault();
-        console.log('Button Works')
-    }
-
-
-
-
 
 
     render() {
@@ -41,23 +49,25 @@ class FormPage extends Component {
                     </Col>
                 </Row>
 
-                <form>
+                <form class="create-update-form" onSubmit={this.handleSubmit}>
                     <Row>
                         <Col size="md-12">
                             <List>
                                 <Row>
                                     <Col size="md-12">
                                         <Input
+                                        onChange={this.handleInputChange}
                                             className="md-form active-cyan active-cyan-2 md-6"
-                                            className="form-control" type="text" placeholder="Title" aria-label="input"
+                                            className="form-control" type="text" placeholder="Title" name="title" aria-label="input"
                                         />
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col size="md-12">
                                         <Input
+                                        onChange={this.handleInputChange}
                                             className="md-form active-cyan active-cyan-2 md-12"
-                                            className="form-control" type="text" placeholder="Description" aria-label="input" />
+                                            className="form-control" type="text" placeholder="Description" name="desc" aria-label="input" />
 
                                     </Col>
                                 </Row>
@@ -65,8 +75,9 @@ class FormPage extends Component {
                                 <Row>
                                     <Col size="md-12">
                                         <Input
+                                        onChange={this.handleInputChange}
                                             className="md-form active-cyan active-cyan-2 md-6"
-                                            className="form-control" type="text" placeholder="Other Info" aria-label="input" />
+                                            className="form-control" type="text" placeholder="Other Info" name="otherinfo" aria-label="input" />
 
                                     </Col>
                                 </Row>
@@ -75,9 +86,50 @@ class FormPage extends Component {
                                     <Col size="md-12">
                                         <div id='steps'>
                                             <Input
+                                            onChange={this.handleInputChange}
                                                 id="stepz"
                                                 className="md-form active-cyan active-cyan-2 md-6"
-                                                className="form-control" type="text" placeholder="Step 1." aria-label="input" />
+                                                className="form-control" type="text" placeholder="Step 1." name="stepone" aria-label="input" />
+                                        </div>
+                                    </Col>
+
+                                      <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                            onChange={this.handleInputChange}
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 2." name="steptwo" aria-label="input" />
+                                        </div>
+                                    </Col>
+
+                                      <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                            onChange={this.handleInputChange}
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 3." name="stepthree" aria-label="input" />
+                                        </div>
+                                    </Col>
+
+                                      <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                            onChange={this.handleInputChange}
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 4 (Optional)" name="stepfour" aria-label="input" />
+                                        </div>
+                                    </Col>
+
+                                      <Col size="md-12">
+                                        <div id='steps'>
+                                            <Input
+                                            onChange={this.handleInputChange}
+                                                id="stepz"
+                                                className="md-form active-cyan active-cyan-2 md-6"
+                                                className="form-control" type="text" placeholder="Step 5 (Optional)" name="stepfive" aria-label="input" />
                                         </div>
                                     </Col>
 
@@ -85,8 +137,13 @@ class FormPage extends Component {
 
                                 <Row>
                                     <Col size="md-4">
-                                        <button type="button" className="btn btn-primary" onClick={this.onClick} >Add Step</button>
+                                        <button type="button" className="btn btn-primary" >Add Step</button>
+                                        <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
+
                                     </Col>
+
+                        
+            
                                 </Row>
 
 
@@ -95,9 +152,7 @@ class FormPage extends Component {
                     </Row>
                 </form>
 
-                <Row>
-                    <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
-                </Row>
+                
 
             </Container >
 
