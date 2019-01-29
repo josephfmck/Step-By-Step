@@ -80,13 +80,15 @@ class Home extends Component {
                     <SearchBar />
                   </Col>
                   <Col size="md-4">
-                    <Link to="/FormPage">
+                    <Link to="/">
                       <button className="btn btn-outline-success">Search</button>
                     </Link>
                   </Col>
+                  <Link to="/FormPage">
                   <Col size="md-4">
                   <button className="btn btn-outline-success">Create Own Button</button>
                   </Col>
+                  </Link>
                 </Row>
               </Col>
             </form>
