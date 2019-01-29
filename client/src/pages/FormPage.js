@@ -22,11 +22,6 @@ class FormPage extends Component {
         stepfive: ''
     }
   
-    
-    constructor(props) {
-        super(props)
-        this.onClick = this.onClick.bind(this)
-    };
 
 
     handleSubmit(event) {
