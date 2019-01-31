@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
-//import API from "../utils/API";
+import API from "../utils/API";
 //import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
@@ -42,6 +42,24 @@ class FormPage extends Component {
         var joined = this.state.steps.concat('step');
         this.setState({ steps: joined });
     }
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.title && this.state.author) {
+          API.saveStepByStep({
+            title: this.state.title,
+            author: this.state.author,
+            description: this.state.description,
+            stepone: this.state.stepone, 
+            steptwo: this.state.steptwo, 
+            stepthree: this.state.stepthree, 
+            stepfour: this.state.stepfour, 
+            stepfive: this.state.stepfive 
+          })
+            .then(res => this.loadStepBySteps())
+            .catch(err => console.log(err));
+        }
+      };
 
 
 
@@ -157,6 +175,13 @@ class FormPage extends Component {
                                     <Col size="md-4">
                                         <button type="button" className="btn btn-primary" onClick={this.addStepOnClick}>Add Step</button>
                                         <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
+
+                                        <FormBtn
+                                          disabled={!(this.state.stepone && this.state.title)}
+                                          onClick={this.handleFormSubmit}
+                                        >
+                                          Submit Step By Step
+                                        </FormBtn>
 
                                     </Col>
 
