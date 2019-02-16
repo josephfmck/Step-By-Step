@@ -7,8 +7,7 @@ https://stepp-by-stepp.herokuapp.com/
 Heroku
 
 ## Built With
-MERN stack
-Mongoose ORM
+•	JavaScript, Node, MongoDB, Express, Mongoose ORM, React, ReactRouter.
 
 ## Authors
 
