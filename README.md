@@ -6,11 +6,11 @@ https://stepp-by-stepp.herokuapp.com/
 
 Heroku
 
-##Built With
+## Built With
 MERN stack
 Mongoose ORM
 
-##Authors
+## Authors
 
 * **Joe McKinney** - *Back-End and Javascript* - [josephfmck](https://github.com/josephfmck)
 * **Micah Walker** - *Front-End and Javascript* - [Mjwalker99](https://github.com/Mjwalker99)
