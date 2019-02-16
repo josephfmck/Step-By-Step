@@ -1,10 +1,10 @@
 # Step-By-Step
 
-https://stepp-by-stepp.herokuapp.com/
+Web app that allows for users to find and create step by step instructions on any topic.
 
 ## Deployment
 
-Heroku
+https://stepp-by-stepp.herokuapp.com/
 
 ## Built With
 •	JavaScript, Node, MongoDB, Express, Mongoose ORM, React, ReactRouter.
