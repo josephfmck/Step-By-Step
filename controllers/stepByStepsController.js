@@ -33,5 +33,11 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findAllByTitle: function(req, res) {
+    db.StepByStep
+      .find(req.query, { title: req.parms.title })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
 };

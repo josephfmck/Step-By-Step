@@ -174,7 +174,6 @@ class FormPage extends Component {
                                 <Row>
                                     <Col size="md-4">
                                         <button type="button" className="btn btn-primary" onClick={this.addStepOnClick}>Add Step</button>
-                                        <button className="btn btn-outline-success" type="submit" value="Submit"> Submit </button>
 
                                         <FormBtn
                                           disabled={!(this.state.stepone && this.state.title)}
