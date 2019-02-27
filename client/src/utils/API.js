@@ -16,5 +16,9 @@ export default {
   // Saves a book to the database
   saveStepByStep: function(stepByStepData) {
     return axios.post("/api/stepbysteps", stepByStepData);
-  }
+  },
+  // GETS Search Bar Input
+  //getSearchInfo: function(title) {
+  //  return axios.get("/api/stepbysteps" + title);
+  //}
 };

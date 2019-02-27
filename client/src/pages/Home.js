@@ -1,15 +1,18 @@
 import React, { Component } from "react";
+import {  Input } from 'reactstrap';
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+//import { Input, TextArea, FormBtn } from "../components/Form";
 import './style.css';
 import ApiImages from "../components/ApiImages";
 import Moment from 'react-moment';
-import SearchBar from "../components/SearchBar";
+import Axios from "axios";
+//import SearchBar from "../components/SearchBar";
+//import SearchField from 'react-search-field';
 //import moment from 'moment'
 
 
@@ -25,10 +28,11 @@ class Home extends Component {
     steptwo: "",
     stepthree: "",
     stepfour: "",
-    stepfive: "",
+    stepfive: ""
   };
 
   componentDidMount() {
+    this.search("");
     this.loadStepBySteps();
   }
 
@@ -50,6 +54,27 @@ class Home extends Component {
       .catch(err => console.log(err));
   };
 
+    //handleSearchInputChange = () => {
+  //  API.getSearchInfo()
+  //  .then(res =>
+  //    this.setState({ 
+  //      stepBySteps: res.data, 
+  //      title: "", 
+  //      author: "", 
+  //      description: "", 
+  //      stepone: "", 
+  //      steptwo: "", 
+  //      stepthree: "", 
+  //      stepfour: "", 
+  //      stepfive: "",
+  //      query: this.search.value
+//
+  //    })
+  //  )
+  //  .catch(err => console.log(err));
+  //};
+
+
   deleteStepByStep = id => {
     API.deleteStepByStep(id)
       .then(res => this.loadStepBySteps())
@@ -58,10 +83,28 @@ class Home extends Component {
 
   handleInputChange = event => {
     const { name, value } = event.target;
+    console.log('Value', value)
     this.setState({
-      [name]: value
+      [name]: value,
+      query: value
     });
+
+    this.search(value);
   };
+
+  search = query => {
+    Axios.get('http://localhost:3001/api/stepbysteps')
+    .then(res =>{
+      const searchInfo = (res.data || []).map(obj => ({
+        title: obj.title,
+        author: obj.author
+      }));
+
+      this.setState({ searchInfo });
+    })
+  };
+
+
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -81,6 +124,10 @@ class Home extends Component {
     }
   };
 
+
+ 
+
+
   render() {
     return (
       <Container fluid>
@@ -93,9 +140,14 @@ class Home extends Component {
             <form>
               <Col size="md-12" >
                 <Row>
-                  
                   <Col id="search" size="md-4">
-                    <SearchBar />
+                  
+
+                  <form>
+                    <Input onChange={this.handleInputChange} type="search" name="search" id="exampleSearch" placeholder="search"/>
+                  </form>
+
+
                   </Col>
                   <Col size="md-4">
                     <Link to="/">
