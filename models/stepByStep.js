@@ -13,6 +13,10 @@ const stepByStepSchema = new Schema({
   stepfive: { type: String, required: true }
 });
 
+//TRY changing each step feature to false expect step one
+
+//TRY changing all steps to one step data row that is an array
+
 const StepByStep = mongoose.model("StepByStep", stepByStepSchema);
 
 module.exports = StepByStep;
