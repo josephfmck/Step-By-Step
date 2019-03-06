@@ -4,9 +4,9 @@ a.navbar-brand {
 }
 
 .navbar-brand:hover{
-text-decoration: underline;    
+    text-decoration: underline;    
 }
 
 a.navbar-brand{
-color: black;    
+    color: black;    
 }

@@ -75,12 +75,14 @@ class Home extends Component {
   //};
 
 
+  //DELETE 
   deleteStepByStep = id => {
     API.deleteStepByStep(id)
       .then(res => this.loadStepBySteps())
       .catch(err => console.log(err));
   };
 
+  //INPUT CHANGE EVENT HANDLER
   handleInputChange = event => {
     const { name, value } = event.target;
     console.log('Value', value)
@@ -92,6 +94,7 @@ class Home extends Component {
     this.search(value);
   };
 
+  //SEARCH EVENT HANDLER
   search = query => {
     Axios.get('http://localhost:3001/api/stepbysteps')
     .then(res =>{
@@ -105,7 +108,7 @@ class Home extends Component {
   };
 
 
-
+  //FORM SUBMIT EVENT HANDLER
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.title && this.state.author) {

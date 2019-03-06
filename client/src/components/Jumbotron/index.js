@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css';
 
 
 
@@ -10,7 +11,7 @@ function Jumbotron({ children }) {
         height: 300, 
         clear: "both", 
         paddingTop: 120, 
-        textAlign: "center",
+        textAlign: "center"
       }}
       className="jumbotron"
     >
