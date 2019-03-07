@@ -140,7 +140,7 @@ class Home extends Component {
               <h1>Step-By-Step </h1>
               <h2> DIY Task's </h2>
             </Jumbotron>
-            <form>
+
               <Col size="md-12" >
                 <Row>
                   <Col id="search" size="md-4">
@@ -153,18 +153,12 @@ class Home extends Component {
 
                   </Col>
                   <Col size="md-4">
-                    <Link to="/">
                       <button className="btn btn-outline-success">Search</button>
-                    </Link>
                   </Col>
-                  <Link to="/FormPage">
-                  <Col size="md-4">
-                  <button className="btn btn-outline-success">Create Own Button</button>
-                  </Col>
-                  </Link>
+
                 </Row>
               </Col>
-            </form>
+
 
 
 

@@ -1,9 +1,9 @@
 .list-overflow-container {
-  max-height: 545px;
+  max-height: 100%;
   border: 3px #EB6864 solid;
   border-radius: 10px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  /*overflow-y: scroll;*/
+  /*overflow-x: hidden;*/
   padding: 20px;
   margin: 30px;
   background-color: antiquewhite;
