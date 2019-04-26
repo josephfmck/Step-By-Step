@@ -11,7 +11,8 @@ function Jumbotron({ children }) {
         height: 300, 
         clear: "both", 
         paddingTop: 120, 
-        textAlign: "center"
+        textAlign: "center",
+        margin: 0
       }}
       className="jumbotron"
     >

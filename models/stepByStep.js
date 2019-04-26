@@ -9,8 +9,8 @@ const stepByStepSchema = new Schema({
   stepone: { type: String, required: true },
   steptwo: { type: String, required: true },
   stepthree: { type: String, required: true },
-  stepfour: { type: String, required: true },
-  stepfive: { type: String, required: true }
+  stepfour: { type: String, required: false },
+  stepfive: { type: String, required: false }
 });
 
 //TRY changing each step feature to false expect step one

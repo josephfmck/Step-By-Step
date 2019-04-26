@@ -87,11 +87,10 @@ class Home extends Component {
     const { name, value } = event.target;
     console.log('Value', value)
     this.setState({
-      [name]: value,
-      query: value
+      [name]: value
     });
 
-    this.search(value);
+   // this.search(value);
   };
 
   //SEARCH EVENT HANDLER
@@ -146,9 +145,8 @@ class Home extends Component {
                   <Col id="search" size="md-4">
                   
 
-                  <form>
                     <Input onChange={this.handleInputChange} type="search" name="search" id="exampleSearch" placeholder="search"/>
-                  </form>
+
 
 
                   </Col>

@@ -4,7 +4,7 @@ function SearchBar() {
   return (
     <input
       className="md-form active-cyan active-cyan-2 md-6"
-      className="form-control" type="text" placeholder="Search" aria-label="Search"
+      className="form-control" type="search" placeholder="Search" aria-label="Search"
     />
   );
 }
