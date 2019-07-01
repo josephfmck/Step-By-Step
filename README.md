@@ -2,7 +2,7 @@
 
 Web app that allows for users to find and create step by step instructions on any topic.
 
-![Screenshot](Screenshot-StepByStep.PNG)
+![Screenshot](img/Screenshot-StepByStep.PNG)
 
 ## Deployment
 
