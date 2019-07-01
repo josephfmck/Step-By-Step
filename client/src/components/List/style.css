@@ -14,9 +14,11 @@
 }
 
 .list-overflow-container li {
-  border-radius: 0px;
+  border-radius: 10px;
   border-left: none;
   border-right: none;
+  
+  position: relative;
 }
 
 .list-overflow-container li * {
@@ -24,7 +26,16 @@
 }
 
 .list-overflow-container li a {
+  display: block;
+  height: 160px;
   color: #2A878C;
+  font-size: 2em;
+  margin-top: 10px;
+  /*trying to center content vertically*/
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .list-overflow-container li:first-child {
@@ -34,3 +45,5 @@
 .list-overflow-container li:last-child {
   border-bottom: none;
 }
+
+

@@ -137,7 +137,7 @@ class Home extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>Step-By-Step </h1>
-              <h2> DIY Task's </h2>
+              <h2>Step-By-Step Directions For Anything</h2>
             </Jumbotron>
 
               <Col size="md-12" >
@@ -145,7 +145,7 @@ class Home extends Component {
                   <Col id="search" size="md-4">
                   
 
-                    <Input onChange={this.handleInputChange} type="search" name="search" id="exampleSearch" placeholder="search"/>
+                    <Input onChange={this.handleInputChange} type="search" name="search" id="exampleSearch" placeholder="Search for a Task"/>
 
 
 

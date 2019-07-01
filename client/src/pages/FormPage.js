@@ -69,7 +69,7 @@ class FormPage extends Component {
                     <Col size="md-12">
                         <Jumbotron>
                             <h1>Step-By-Step Create</h1>
-                            <h2>Make Your Own.  </h2>
+                            <h2>Step-By-Step Directions For Anything</h2>
                         </Jumbotron>
                     </Col>
                 </Row>
