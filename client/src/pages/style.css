@@ -3,9 +3,10 @@
     padding-right: 0;
 }
 
-div.jumbotron {
+div .jumbotron {
  background-image: url("http://starhomeliving.com/wp-content/uploads/2017/09/Helpful-Do-It-Yourself-Tips.jpg");
  background-size: 100%;
+ border-radius: 0%;
 }
 
 h6, .h6{
@@ -23,4 +24,16 @@ h1, h2 {
 
 .form-control {
 margin-top: 20px;
+}
+
+#gridz > input[type="search"], #gridz > button {
+    margin-left: 10%;
+}
+
+
+
+
+/**/
+#col-steps {
+    padding: 20px;
 }
